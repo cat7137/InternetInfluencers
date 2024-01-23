@@ -1,0 +1,253 @@
+
+body{
+    background: linear-gradient(lightcoral, lightpink);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 100%;
+}
+
+nav{
+    display: flex;
+    border-style: solid;
+    border-color: darkmagenta;
+    border-width: 3px; 
+    box-shadow: 2px 2px 2px 2px darkmagenta;
+    background:#f39c9c; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align:   center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+.wealth{
+    grid-area: wealth;
+    text-align: center;
+}
+.title{
+    grid-area: title;
+    text-align: center;
+    font-size: 120%;
+}
+.impacts{
+    grid-area: impacts;
+    text-align: center;
+}
+.fame{
+    grid-area: fame;
+    text-align: center;
+}
+.references{
+    grid-area: references;
+    text-align: center;
+}
+.people{
+    grid-area: people;
+    font-size: 120%;
+}
+.media{
+    grid-area: media;
+    font-size: 130%;
+}
+.brittany{
+    grid-area: brittany;
+}
+.money{
+    grid-area: money;
+    font-size: 120%;
+}
+.coffee{
+    grid-area: coffee;
+}
+.morecoffee{
+    grid-area: morecoffee;
+}
+.cancelled{
+    grid-area: cancelled;
+}
+.stardom{
+    grid-area: stardom;
+}
+h1{
+    text-align: center;
+    font-family: 'Youtube Sans';
+    font-size: 120%;
+    text-shadow: 1px 1px black;
+    transition: all 750ms;
+}
+.title > p{
+    text-align: center;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "title title title"
+                         "impacts wealth fame"
+                         "impacts references fame";
+    
+    grid-gap: 2em 1em;
+    padding: 10px;
+}
+.wrapperimpacts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "title title title"
+                         "media media brittany"
+                         "people people people"
+                         "people people people";
+    grid-gap: 2em 1em;
+    padding: 10px;
+}
+.wealthwrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title"
+                         "morecoffee money"
+                         "coffee money";
+    grid-gap: 1em 1em;
+    padding: 10px;
+}
+.famewrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title"
+                         "stardom cancelled"
+                         "stardom cancelled";
+    grid-gap: 1em;
+    padding: 10px;
+}
+.box{
+    border: solid;
+    border-color: black;
+    background: #f39c9c;
+    box-shadow: 5px 5px 5px 5px black;
+    transition: all 1s;
+}
+.impactbox{
+    border: solid;
+    border-color: black;
+}
+.wealthbox{
+    border: solid;
+    border-color: black;
+    padding: 20px;
+}
+.famebox{
+    border: solid;
+    border-color: black;
+    padding: 15px;
+    font-size: 110%;
+}
+div{
+    border: solid;
+    border-color: black;
+    padding: 50px;
+    overflow: auto;
+}
+.box:hover{
+    transform: scale(1.05);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+p{
+    padding: 5px;
+}
+a{
+    padding: 5px;
+    transition: all 500ms;
+}
+
+h1 > a{
+    text-decoration: none;
+    color: black;
+}
+h3 > a{
+    color: black;
+}
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+
+h1:hover{
+    transform: scale(1.2);
+}
+a:hover{
+    transform: scale(1.2);
+    
+}
+
+#brittany{
+    width: 90%;
+    height: 100%;
+    min-width: 90%;
+    min-height: 100%;
+    padding: 0px;
+}
+.wrapperimpacts > .title{
+    font-size: 120%;
+}
+figcaption{
+    text-align: center;
+}
+figure{
+    text-align: center;
+}
+#emma{
+    width: 225px;
+    height: 225px;
+    position: relative;
+}
+#moreemma{
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+}
+#citations{
+    font-size: 150%;
+}
+
+@media screen and (max-width: 600px){
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title title"
+                             "impacts impacts"
+                             "wealth wealth"
+                             "fame fame"
+                             "references references";
+        
+    }
+    .famewrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title title"
+                             "stardom stardom"
+                             "cancelled cancelled";
+    }
+    .wealthwrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title title"
+                             "money money"
+                             "morecoffee morecoffee"
+                             "coffee coffee";
+    }
+    .wrapperimpacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title title"
+                             "media media"
+                             "brittany brittany"
+                             "people people"
+                             "people people";
+    }
+
+}
